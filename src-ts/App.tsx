@@ -62,12 +62,14 @@ const App: React.FC = () => {
         name='source file'
         maxCount={1}
         multiple={false}
-        customRequest={async ({ file }) => {
-          const buf = await readFile(file as File)
+        customRequest={async (e) => {
+          const file = e.file as File
+          const buf = await readFile(file)
           setSource(buf)
           const slot = get_slots(buf)
           setSourceSlot(slot)
           setSourceIndex(slot.findIndex(i => i.active))
+          e.onSuccess?.(undefined)
         }}
       >
         <p className="ant-upload-drag-icon">
@@ -116,6 +118,7 @@ const App: React.FC = () => {
           const slot = get_slots(buf)
           setTargetIndex(slot.findIndex(i => i.active))
           setTargetSlot(slot)
+          e.onSuccess?.(undefined)
         }}
       >
         <p className="ant-upload-drag-icon">
