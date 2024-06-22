@@ -1,0 +1,12 @@
+[package]
+name = "elden-ring-saver"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "ansi2"
+repository = "https://github.com/ahaoboy/elden-ring-saver"
+homepage = "https://github.com/ahaoboy/elden-ring-saver"
+authors = ["ahaoboy"]
+
+[dependencies]
+md5 = "0.7.0"

@@ -1,0 +1,16 @@
+[package]
+name = "elden-ring-saver-wasm"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "ansi2"
+repository = "https://github.com/ahaoboy/elden-ring-saver"
+homepage = "https://github.com/ahaoboy/elden-ring-saver"
+authors = ["ahaoboy"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+elden-ring-saver = { path = "../elden-ring-saver" }
+wasm-bindgen = "0.2.84"
