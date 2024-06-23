@@ -59,6 +59,7 @@ const App: React.FC = () => {
     <div className='item'>
       <h2>Source</h2>
       <Dragger
+        accept=".sl2"
         name='source file'
         maxCount={1}
         multiple={false}
@@ -107,6 +108,7 @@ const App: React.FC = () => {
     <div className='item'>
       <h2>Target</h2>
       <Dragger
+        accept=".sl2"
         name='target file'
         maxCount={1}
         multiple={false}
